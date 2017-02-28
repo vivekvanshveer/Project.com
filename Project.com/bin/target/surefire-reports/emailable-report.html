@@ -1,0 +1,136 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>TestNG:  Unit Test</title>
+<style type="text/css">
+table caption,table.info_table,table.param,table.passed,table.failed {margin-bottom:10px;border:1px solid #000099;border-collapse:collapse;empty-cells:show;}
+table.info_table td,table.info_table th,table.param td,table.param th,table.passed td,table.passed th,table.failed td,table.failed th {
+border:1px solid #000099;padding:.25em .5em .25em .5em
+}
+table.param th {vertical-align:bottom}
+td.numi,th.numi,td.numi_attn {
+text-align:right
+}
+tr.total td {font-weight:bold}
+table caption {
+text-align:center;font-weight:bold;
+}
+table.passed tr.stripe td,table tr.passedodd td {background-color: #00AA00;}
+table.passed td,table tr.passedeven td {background-color: #33FF33;}
+table.passed tr.stripe td,table tr.skippedodd td {background-color: #cccccc;}
+table.passed td,table tr.skippedodd td {background-color: #dddddd;}
+table.failed tr.stripe td,table tr.failedodd td,table.param td.numi_attn {background-color: #FF3333;}
+table.failed td,table tr.failedeven td,table.param tr.stripe td.numi_attn {background-color: #DD0000;}
+tr.stripe td,tr.stripe th {background-color: #E6EBF9;}
+p.totop {font-size:85%;text-align:center;border-bottom:2px black solid}
+div.shootout {padding:2em;border:3px #4854A8 solid}
+</style>
+</head>
+<body>
+<table cellspacing=0 cellpadding=0 class="param">
+<tr><th>Test</th><th class="numi">Methods<br/>Passed</th><th class="numi">Scenarios<br/>Passed</th><th class="numi"># skipped</th><th class="numi"># failed</th><th class="numi">Total<br/>Time</th><th class="numi">Included<br/>Groups</th><th class="numi">Excluded<br/>Groups</th></tr>
+<tr><td style="text-align:left;padding-right:2em">Test</td><td class="numi">12</td><td class="numi">12</td><td class="numi">0</td><td class="numi_attn">3</td><td class="numi">1,063.5 seconds</td><td class="numi"></td><td class="numi"></td></tr>
+</table>
+<a id="summary"></a>
+<table cellspacing=0 cellpadding=0 class="passed">
+<tr><th>Class</th><th>Method</th><th># of<br/>Scenarios</th><th>Time<br/>(Msecs)</th></tr>
+<tr><th colspan="4">Test &#8212; failed</th></tr>
+<tr class="failedodd"><td rowspan="3">ModulesTests.IBMScoreTests<td><a href="#m1"><b>CostCalculationInUSDTest</b>  ("To check Cost Calculation of Estimate Cost, Negotiated Cost & Savings in USD ")</a></td><td class="numi">1</td><td class="numi">43625</td></tr><tr class="failedodd"><td><a href="#m2"><b>Summition_Of_SavingsInUSD_OnApprovalPageTest</b>  ("To calculate & verify Score Saving Values with Title's value")</a></td><td class="numi">1</td><td class="numi">34588</td></tr><tr class="failedodd"><td><a href="#m3"><b>Corporate_Approval_Not_Deleted_By_FieldandRegionalUsersTest</b>  ("To check Corporate Approval Not Deleted By Field and Regional Users")</a></td><td class="numi">1</td><td class="numi">9220</td></tr>
+<tr><th colspan="4">Test &#8212; passed</th></tr>
+<tr class="passedodd"><td rowspan="12">ModulesTests.IBMScoreTests<td><a href="#m4"><b>Verify_Draft_SCORE_All_Aprroval_For_RegionalUserTest</b>  ("To verify while approving 'Draft' Score, getting proper error message or not using Regional User credentials. ")</a></td><td class="numi">1</td><td class="numi">154172</td></tr><tr class="passedodd"><td><a href="#m5"><b>otherClientCodeFunctionalityTest</b>  ("To Check, Non BU Specific Sub Program picklist value is not mandatory if Client Code is other than 1208- IBM ")</a></td><td class="numi">1</td><td class="numi">32196</td></tr><tr class="passedodd"><td><a href="#m6"><b>Entry_Date_Validation_QuarterTest</b>  ("To Verify Entry_Date_Validation_Quarter ")</a></td><td class="numi">1</td><td class="numi">35485</td></tr><tr class="passedodd"><td><a href="#m7"><b>Regional_Officer_FunctionalityTest</b>  ("To check for Regional Officer user's privileges i.e. Shoudn't grant to access Corporate Aprrovals ")</a></td><td class="numi">1</td><td class="numi">184010</td></tr><tr class="passedodd"><td><a href="#m8"><b>Field_Officer_FunctionalityTest</b>  ("To check for Field Officer user's privileges i.e. Shoudn't grant to access Regional, Quarterly Approval & Corporate Aprrovals ")</a></td><td class="numi">1</td><td class="numi">137057</td></tr><tr class="passedodd"><td><a href="#m9"><b>JDE_Project_FunctionalityTest</b>  ("To Verify after selecting JDE Project, its Event details are getting populate or not ")</a></td><td class="numi">1</td><td class="numi">48339</td></tr><tr class="passedodd"><td><a href="#m10"><b>SCORE_Date_Validation_QuarterTest</b>  ("To Verify SCORE_Date_Validation_Quarter ")</a></td><td class="numi">1</td><td class="numi">30990</td></tr><tr class="passedodd"><td><a href="#m11"><b>ClientCodeFunctionalityTest</b>  ("To verify SCORE_Non_BU_Specific_Required when we select Non BU when Client Code = 1208- IBM")</a></td><td class="numi">1</td><td class="numi">45027</td></tr><tr class="passedodd"><td><a href="#m12"><b>GPJSCORECostSavingRecordSubmissionTest</b>  ("To Verify after submitting Score Cost Saving Record, its Status getting changed to 'Submitted' or NOT ")</a></td><td class="numi">1</td><td class="numi">57575</td></tr><tr class="passedodd"><td><a href="#m13"><b>Only_RecordOwner_Allowed_To_Submit_ScoreTest</b>  ("To verify Only Record Owner Allowed To Submit Score ")</a></td><td class="numi">1</td><td class="numi">55821</td></tr><tr class="passedodd"><td><a href="#m14"><b>Estimated_and_Negotiated_ValidationTest</b>  ("To Verify Estimated and Negotiated Validation ")</a></td><td class="numi">1</td><td class="numi">33380</td></tr><tr class="passedodd"><td><a href="#m15"><b>Corporate_Officer_FunctionalityTest</b>  ("To check for Corporate Officer user's privileges i.e. Shoud grant to access all aprrovals like Submission, Regional, Quarterly & Corporate Aprrovals ")</a></td><td class="numi">1</td><td class="numi">161936</td></tr>
+</table>
+<h1>Test</h1>
+<a id="m1"></a><h2>ModulesTests.IBMScoreTests:CostCalculationInUSDTest</h2>
+<div style="padding-left:3em">
+<p> expected:&lt;22.134&gt; but was:&lt;22.135&gt;</p>
+org.testng.Assert.fail(Assert.java:89)
+<br/>at org.testng.Assert.failNotEquals(Assert.java:489)
+<br/>at org.testng.Assert.assertEquals(Assert.java:118)
+<br/>at org.testng.Assert.assertEquals(Assert.java:171)
+<br/>at Modules.IBMScore.CostCalculationInUSD(IBMScore.java:437)
+<br/>at ModulesTests.IBMScoreTests.CostCalculationInUSDTest(IBMScoreTests.java:41)
+<br/>29 lines not shown
+</div>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<a id="m2"></a><h2>ModulesTests.IBMScoreTests:Summition_Of_SavingsInUSD_OnApprovalPageTest</h2>
+<div style="padding-left:3em">
+<p>no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//div[@class=&apos;title&apos;]&quot;}
+  (Session info: chrome=56.0.2924.87)
+  (Driver info: chromedriver=2.27.440174 (e97a722caafc2d3a8b807ee115bfb307f7d2cfd9),platform=Windows NT 10.0.14393 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 20.80 seconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;2.47.1&apos;, revision: &apos;unknown&apos;, time: &apos;2015-07-30 11:02:44&apos;
+System info: host: &apos;DESKTOP-9JV455Q&apos;, ip: &apos;10.1.0.131&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;x86&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_66&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.27.440174 (e97a722caafc2d3a8b807ee115bfb307f7d2cfd9), userDataDir=C:\WINDOWS\TEMP\scoped_dir5292_20193}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=56.0.2924.87, platform=XP, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true, unexpectedAlertBehaviour=}]
+Session ID: 676bc1988bedd1de1aef5807f8a06ec5
+*** Element info: {Using=xpath, value=//div[@class=&apos;title&apos;]}</p>
+sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+<br/>at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+<br/>at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+<br/>at java.lang.reflect.Constructor.newInstance(Unknown Source)
+<br/>at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:206)
+<br/>at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:158)
+<br/>at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:595)
+<br/>at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:348)
+<br/>at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:445)
+<br/>at org.openqa.selenium.By$ByXPath.findElement(By.java:358)
+<br/>at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:340)
+<br/>at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
+<br/>at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+<br/>at com.sun.proxy.$Proxy5.getText(Unknown Source)
+<br/>at Modules.IBMScore.Summition_Of_SavingsInUSD_OnApprovalPage(IBMScore.java:1227)
+<br/>at ModulesTests.IBMScoreTests.Summition_Of_SavingsInUSD_OnApprovalPageTest(IBMScoreTests.java:120)
+<br/>29 lines not shown
+</div>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<a id="m3"></a><h2>ModulesTests.IBMScoreTests:Corporate_Approval_Not_Deleted_By_FieldandRegionalUsersTest</h2>
+<div style="padding-left:3em">
+<p>unknown error: Element &lt;div class=&quot;x-grid3-cell-inner x-grid3-col-NAME&quot; id=&quot;a5i22000000AMyS_NAME&quot;&gt;...&lt;/div&gt; is not clickable at point (412, 292). Other element would receive the click: &lt;h4&gt;...&lt;/h4&gt;
+  (Session info: chrome=56.0.2924.87)
+  (Driver info: chromedriver=2.27.440174 (e97a722caafc2d3a8b807ee115bfb307f7d2cfd9),platform=Windows NT 10.0.14393 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 56 milliseconds
+Build info: version: &apos;2.47.1&apos;, revision: &apos;unknown&apos;, time: &apos;2015-07-30 11:02:44&apos;
+System info: host: &apos;DESKTOP-9JV455Q&apos;, ip: &apos;10.1.0.131&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;x86&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_66&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.27.440174 (e97a722caafc2d3a8b807ee115bfb307f7d2cfd9), userDataDir=C:\WINDOWS\TEMP\scoped_dir5292_20193}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=56.0.2924.87, platform=XP, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true, unexpectedAlertBehaviour=}]
+Session ID: 676bc1988bedd1de1aef5807f8a06ec5</p>
+sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+<br/>at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+<br/>at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+<br/>at java.lang.reflect.Constructor.newInstance(Unknown Source)
+<br/>at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:206)
+<br/>at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:158)
+<br/>at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:595)
+<br/>at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:273)
+<br/>at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:84)
+<br/>at Modules.IBMScore.Corporate_Approval_Not_Deleted_By_FieldandRegionalUsers(IBMScore.java:1120)
+<br/>at ModulesTests.IBMScoreTests.Corporate_Approval_Not_Deleted_By_FieldandRegionalUsersTest(IBMScoreTests.java:113)
+<br/>29 lines not shown
+</div>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<a id="m4"></a><h2>ModulesTests.IBMScoreTests:Verify_Draft_SCORE_All_Aprroval_For_RegionalUserTest</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<a id="m5"></a><h2>ModulesTests.IBMScoreTests:otherClientCodeFunctionalityTest</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<a id="m6"></a><h2>ModulesTests.IBMScoreTests:Entry_Date_Validation_QuarterTest</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<a id="m7"></a><h2>ModulesTests.IBMScoreTests:Regional_Officer_FunctionalityTest</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<a id="m8"></a><h2>ModulesTests.IBMScoreTests:Field_Officer_FunctionalityTest</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<a id="m9"></a><h2>ModulesTests.IBMScoreTests:JDE_Project_FunctionalityTest</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<a id="m10"></a><h2>ModulesTests.IBMScoreTests:SCORE_Date_Validation_QuarterTest</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<a id="m11"></a><h2>ModulesTests.IBMScoreTests:ClientCodeFunctionalityTest</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<a id="m12"></a><h2>ModulesTests.IBMScoreTests:GPJSCORECostSavingRecordSubmissionTest</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<a id="m13"></a><h2>ModulesTests.IBMScoreTests:Only_RecordOwner_Allowed_To_Submit_ScoreTest</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<a id="m14"></a><h2>ModulesTests.IBMScoreTests:Estimated_and_Negotiated_ValidationTest</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<a id="m15"></a><h2>ModulesTests.IBMScoreTests:Corporate_Officer_FunctionalityTest</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+</body></html>

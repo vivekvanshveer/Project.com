@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Suite]">
+  <test name="Test(failed)">
+    <classes>
+      <class name="ModulesTests.IBMScoreTests">
+        <methods>
+          <include name="init"/>
+          <include name="CostCalculationInUSDTest"/>
+          <include name="tearDown"/>
+          <include name="Summition_Of_SavingsInUSD_OnApprovalPageTest"/>
+        </methods>
+      </class> <!-- ModulesTests.IBMScoreTests -->
+    </classes>
+  </test> <!-- Test(failed) -->
+</suite> <!-- Failed suite [Suite] -->

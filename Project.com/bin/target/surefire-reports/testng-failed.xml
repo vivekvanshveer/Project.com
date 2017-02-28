@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite verbose="0" name="Failed suite [Suite]">
+  <test name="Test(failed)" preserve-order="false">
+    <classes>
+      <class name="ModulesTests.IBMScoreTests">
+        <methods>
+          <include name="init"/>
+          <include name="Corporate_Approval_Not_Deleted_By_FieldandRegionalUsersTest"/>
+          <include name="CostCalculationInUSDTest"/>
+          <include name="tearDown"/>
+          <include name="Summition_Of_SavingsInUSD_OnApprovalPageTest"/>
+        </methods>
+      </class>
+    </classes>
+  </test>
+</suite>

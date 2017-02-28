@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Default suite]">
+  <test name="Default test(failed)" preserve-order="false">
+    <classes>
+      <class name="ModulesTests.IBMScoreTests">
+        <methods>
+          <include name="Corporate_Approval_Not_Deleted_By_FieldandRegionalUsersTest"/>
+          <include name="JDE_Project_FunctionalityTest"/>
+          <include name="tearDown"/>
+          <include name="init"/>
+          <include name="CostCalculationInUSDTest"/>
+          <include name="Regional_Officer_FunctionalityTest"/>
+          <include name="Only_RecordOwner_Allowed_To_Submit_ScoreTest"/>
+          <include name="otherClientCodeFunctionalityTest"/>
+          <include name="Corporate_Officer_FunctionalityTest"/>
+          <include name="GPJSCORECostSavingRecordSubmissionTest"/>
+          <include name="Summition_Of_SavingsInUSD_OnApprovalPageTest"/>
+          <include name="Verify_Draft_SCORE_All_Aprroval_For_RegionalUserTest"/>
+          <include name="Field_Officer_FunctionalityTest"/>
+        </methods>
+      </class>
+    </classes>
+  </test>
+</suite>

@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite hostname="DESKTOP-9JV455Q" name="ModulesTests.IBMScoreTests" tests="1" failures="0" timestamp="26 Feb 2017 06:48:01 GMT" time="216.24" errors="0">
+  <testcase name="Corporate_Officer_FunctionalityTest" time="216.2" classname="ModulesTests.IBMScoreTests"/>
+</testsuite>

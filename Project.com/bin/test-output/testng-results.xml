@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="2" total="15" passed="13">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Suite" duration-ms="1531880" started-at="2017-02-28T09:26:01Z" finished-at="2017-02-28T09:51:32Z">
+    <groups>
+    </groups>
+    <test name="Test" duration-ms="1531880" started-at="2017-02-28T09:26:01Z" finished-at="2017-02-28T09:51:32Z">
+      <class name="ModulesTests.IBMScoreTests">
+        <test-method status="PASS" signature="init()[pri:0, instance:ModulesTests.IBMScoreTests@7006c658]" name="init" is-config="true" duration-ms="21576" started-at="2017-02-28T14:55:39Z" description="Initialize the Property files. After that open browser and navigate to Base URL. Login to IBM Score" finished-at="2017-02-28T14:56:01Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- init -->
+        <test-method status="PASS" signature="ClientCodeFunctionalityTest()[pri:0, instance:ModulesTests.IBMScoreTests@7006c658]" name="ClientCodeFunctionalityTest" duration-ms="55172" started-at="2017-02-28T14:56:01Z" description="To verify SCORE_Non_BU_Specific_Required when we select Non BU when Client Code = 1208- IBM" finished-at="2017-02-28T14:56:56Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- ClientCodeFunctionalityTest -->
+        <test-method status="PASS" signature="Estimated_and_Negotiated_ValidationTest()[pri:1, instance:ModulesTests.IBMScoreTests@7006c658]" name="Estimated_and_Negotiated_ValidationTest" duration-ms="35424" started-at="2017-02-28T14:56:56Z" description="To Verify Estimated and Negotiated Validation " finished-at="2017-02-28T14:57:31Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Estimated_and_Negotiated_ValidationTest -->
+        <test-method status="FAIL" signature="CostCalculationInUSDTest()[pri:2, instance:ModulesTests.IBMScoreTests@7006c658]" name="CostCalculationInUSDTest" duration-ms="35287" started-at="2017-02-28T14:57:31Z" description="To check Cost Calculation of Estimate Cost, Negotiated Cost &amp; Savings in USD " finished-at="2017-02-28T14:58:07Z">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[ expected [22.134] but found [22.135]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError:  expected [22.134] but found [22.135]
+	at org.testng.Assert.fail(Assert.java:94)
+	at org.testng.Assert.failNotEquals(Assert.java:496)
+	at org.testng.Assert.assertEquals(Assert.java:125)
+	at org.testng.Assert.assertEquals(Assert.java:178)
+	at Modules.IBMScore.CostCalculationInUSD(IBMScore.java:437)
+	at ModulesTests.IBMScoreTests.CostCalculationInUSDTest(IBMScoreTests.java:41)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:85)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:639)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:816)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1124)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:108)
+	at org.testng.TestRunner.privateRun(TestRunner.java:774)
+	at org.testng.TestRunner.run(TestRunner.java:624)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:359)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:354)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:312)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:261)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1215)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1140)
+	at org.testng.TestNG.run(TestNG.java:1048)
+	at org.testng.TestNG.privateMain(TestNG.java:1355)
+	at org.testng.TestNG.main(TestNG.java:1324)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- CostCalculationInUSDTest -->
+        <test-method status="PASS" signature="Entry_Date_Validation_QuarterTest()[pri:3, instance:ModulesTests.IBMScoreTests@7006c658]" name="Entry_Date_Validation_QuarterTest" duration-ms="33708" started-at="2017-02-28T14:58:07Z" description="To Verify Entry_Date_Validation_Quarter " finished-at="2017-02-28T14:58:40Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Entry_Date_Validation_QuarterTest -->
+        <test-method status="PASS" signature="SCORE_Date_Validation_QuarterTest()[pri:4, instance:ModulesTests.IBMScoreTests@7006c658]" name="SCORE_Date_Validation_QuarterTest" duration-ms="32140" started-at="2017-02-28T14:58:40Z" description="To Verify SCORE_Date_Validation_Quarter " finished-at="2017-02-28T14:59:12Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- SCORE_Date_Validation_QuarterTest -->
+        <test-method status="PASS" signature="JDE_Project_FunctionalityTest()[pri:5, instance:ModulesTests.IBMScoreTests@7006c658]" name="JDE_Project_FunctionalityTest" duration-ms="49520" started-at="2017-02-28T14:59:12Z" description="To Verify after selecting JDE Project, its Event details are getting populate or not " finished-at="2017-02-28T15:00:02Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- JDE_Project_FunctionalityTest -->
+        <test-method status="PASS" signature="otherClientCodeFunctionalityTest()[pri:6, instance:ModulesTests.IBMScoreTests@7006c658]" name="otherClientCodeFunctionalityTest" duration-ms="37606" started-at="2017-02-28T15:00:02Z" description="To Check, Non BU Specific Sub Program picklist value is not mandatory if Client Code is other than 1208- IBM " finished-at="2017-02-28T15:00:40Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- otherClientCodeFunctionalityTest -->
+        <test-method status="PASS" signature="GPJSCORECostSavingRecordSubmissionTest()[pri:7, instance:ModulesTests.IBMScoreTests@7006c658]" name="GPJSCORECostSavingRecordSubmissionTest" duration-ms="60504" started-at="2017-02-28T15:00:40Z" description="To Verify after submitting Score Cost Saving Record, its Status getting changed to &#039;Submitted&#039; or NOT " finished-at="2017-02-28T15:01:40Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- GPJSCORECostSavingRecordSubmissionTest -->
+        <test-method status="PASS" signature="Field_Officer_FunctionalityTest()[pri:8, instance:ModulesTests.IBMScoreTests@7006c658]" name="Field_Officer_FunctionalityTest" duration-ms="154673" started-at="2017-02-28T15:01:40Z" description="To check for Field Officer user&#039;s privileges i.e. Shoudn&#039;t grant to access Regional, Quarterly Approval &amp; Corporate Aprrovals " finished-at="2017-02-28T15:04:15Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Field_Officer_FunctionalityTest -->
+        <test-method status="PASS" signature="Regional_Officer_FunctionalityTest()[pri:9, instance:ModulesTests.IBMScoreTests@7006c658]" name="Regional_Officer_FunctionalityTest" duration-ms="214220" started-at="2017-02-28T15:04:15Z" description="To check for Regional Officer user&#039;s privileges i.e. Shoudn&#039;t grant to access Corporate Aprrovals " finished-at="2017-02-28T15:07:49Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Regional_Officer_FunctionalityTest -->
+        <test-method status="PASS" signature="Corporate_Officer_FunctionalityTest()[pri:10, instance:ModulesTests.IBMScoreTests@7006c658]" name="Corporate_Officer_FunctionalityTest" duration-ms="184282" started-at="2017-02-28T15:07:49Z" description="To check for Corporate Officer user&#039;s privileges i.e. Shoud grant to access all aprrovals like Submission, Regional, Quarterly &amp; Corporate Aprrovals " finished-at="2017-02-28T15:10:53Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Corporate_Officer_FunctionalityTest -->
+        <test-method status="PASS" signature="Verify_Draft_SCORE_All_Aprroval_For_RegionalUserTest()[pri:11, instance:ModulesTests.IBMScoreTests@7006c658]" name="Verify_Draft_SCORE_All_Aprroval_For_RegionalUserTest" duration-ms="173093" started-at="2017-02-28T15:10:53Z" description="To verify while approving &#039;Draft&#039; Score, getting proper error message or not using Regional User credentials. " finished-at="2017-02-28T15:13:46Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Verify_Draft_SCORE_All_Aprroval_For_RegionalUserTest -->
+        <test-method status="PASS" signature="Only_RecordOwner_Allowed_To_Submit_ScoreTest()[pri:12, instance:ModulesTests.IBMScoreTests@7006c658]" name="Only_RecordOwner_Allowed_To_Submit_ScoreTest" duration-ms="64572" started-at="2017-02-28T15:13:46Z" description="To verify Only Record Owner Allowed To Submit Score " finished-at="2017-02-28T15:14:51Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Only_RecordOwner_Allowed_To_Submit_ScoreTest -->
+        <test-method status="PASS" signature="Corporate_Approval_Not_Deleted_By_FieldandRegionalUsersTest()[pri:13, instance:ModulesTests.IBMScoreTests@7006c658]" name="Corporate_Approval_Not_Deleted_By_FieldandRegionalUsersTest" duration-ms="54465" started-at="2017-02-28T15:14:51Z" description="To check Corporate Approval Not Deleted By Field and Regional Users" finished-at="2017-02-28T15:15:45Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Corporate_Approval_Not_Deleted_By_FieldandRegionalUsersTest -->
+        <test-method status="FAIL" signature="Summition_Of_SavingsInUSD_OnApprovalPageTest()[pri:14, instance:ModulesTests.IBMScoreTests@7006c658]" name="Summition_Of_SavingsInUSD_OnApprovalPageTest" duration-ms="347146" started-at="2017-02-28T15:15:45Z" description="To calculate &amp; verify Score Saving Values with Title&#039;s value" finished-at="2017-02-28T15:21:32Z">
+          <exception class="org.openqa.selenium.NoSuchElementException">
+            <message>
+              <![CDATA[no such element: Unable to locate element: {"method":"id","selector":"ext-gen11"}
+  (Session info: chrome=56.0.2924.87)
+  (Driver info: chromedriver=2.27.440174 (e97a722caafc2d3a8b807ee115bfb307f7d2cfd9),platform=Windows NT 10.0.14393 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 20.17 seconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: 'unknown', revision: 'c7b525d', time: '2016-09-01 14:52:30 -0700'
+System info: host: 'DESKTOP-9JV455Q', ip: '10.1.0.131', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_111'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.27.440174 (e97a722caafc2d3a8b807ee115bfb307f7d2cfd9), userDataDir=C:\Users\DELL\AppData\Local\Temp\scoped_dir1736_11966}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=56.0.2924.87, platform=XP, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true, unexpectedAlertBehaviour=}]
+Session ID: a37903c8d95c15e8ce55d9ec2f13617d
+*** Element info: {Using=id, value=ext-gen11}]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"id","selector":"ext-gen11"}
+  (Session info: chrome=56.0.2924.87)
+  (Driver info: chromedriver=2.27.440174 (e97a722caafc2d3a8b807ee115bfb307f7d2cfd9),platform=Windows NT 10.0.14393 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 20.17 seconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: 'unknown', revision: 'c7b525d', time: '2016-09-01 14:52:30 -0700'
+System info: host: 'DESKTOP-9JV455Q', ip: '10.1.0.131', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_111'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.27.440174 (e97a722caafc2d3a8b807ee115bfb307f7d2cfd9), userDataDir=C:\Users\DELL\AppData\Local\Temp\scoped_dir1736_11966}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=56.0.2924.87, platform=XP, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true, unexpectedAlertBehaviour=}]
+Session ID: a37903c8d95c15e8ce55d9ec2f13617d
+*** Element info: {Using=id, value=ext-gen11}
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:206)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:158)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:631)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:369)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementById(RemoteWebDriver.java:418)
+	at org.openqa.selenium.By$ById.findElement(By.java:218)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:361)
+	at Modules.IBMScore.Summition_Of_SavingsInUSD_OnApprovalPage(IBMScore.java:1213)
+	at ModulesTests.IBMScoreTests.Summition_Of_SavingsInUSD_OnApprovalPageTest(IBMScoreTests.java:120)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:85)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:639)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:816)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1124)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:108)
+	at org.testng.TestRunner.privateRun(TestRunner.java:774)
+	at org.testng.TestRunner.run(TestRunner.java:624)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:359)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:354)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:312)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:261)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1215)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1140)
+	at org.testng.TestNG.run(TestNG.java:1048)
+	at org.testng.TestNG.privateMain(TestNG.java:1355)
+	at org.testng.TestNG.main(TestNG.java:1324)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Summition_Of_SavingsInUSD_OnApprovalPageTest -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:ModulesTests.IBMScoreTests@7006c658]" name="tearDown" is-config="true" duration-ms="4146" started-at="2017-02-28T15:21:33Z" finished-at="2017-02-28T15:21:37Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- ModulesTests.IBMScoreTests -->
+    </test> <!-- Test -->
+  </suite> <!-- Suite -->
+</testng-results>
