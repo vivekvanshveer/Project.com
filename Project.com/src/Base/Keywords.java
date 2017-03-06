@@ -26,10 +26,14 @@ import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.support.ui.Select;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
+
+import com.relevantcodes.extentreports.LogStatus;
 
 
 public class Keywords extends TestBase {
+	
 
     //open a browser if its not opened
     public void openBrowser() {
@@ -39,22 +43,27 @@ public class Keywords extends TestBase {
             DesiredCapabilities capabilities = DesiredCapabilities.firefox();
             capabilities.setCapability("marionette", true);
             driver = new FirefoxDriver(capabilities);
+            //logger.log(LogStatus.INFO, "Browser Started");
         } else if (CONFIG.getProperty("browserType").equals("IE")) {
             System.setProperty("webdriver.ie.driver", System.getProperty("user.dir") + "//IEDriverServer.exe");
             DesiredCapabilities ieCapabilities = DesiredCapabilities.internetExplorer();
             ieCapabilities.setCapability(
                 InternetExplorerDriver.INTRODUCE_FLAKINESS_BY_IGNORING_SECURITY_DOMAINS, true);
             driver = new InternetExplorerDriver(ieCapabilities);
+            //logger.log(LogStatus.INFO, "Browser Started");
         } else if (CONFIG.getProperty("browserType").equals("CHROME")) {
             System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir") + "//chromedriver.exe");
             driver = new ChromeDriver();
+            //logger.log(LogStatus.INFO, "Browser Started");
         } else if (CONFIG.getProperty("browserType").equals("HTML")) {
             driver = new HtmlUnitDriver();
+            //logger.log(LogStatus.INFO, "Browser Started");
 
         }
 
+        //logger.log(LogStatus.INFO, "Browser Started");
         driver.manage().window().maximize();
-        driver.manage().timeouts().implicitlyWait(40, TimeUnit.SECONDS);
+        //driver.manage().timeouts().implicitlyWait(1, TimeUnit.SECONDS);
 
 
     }
@@ -91,6 +100,26 @@ public class Keywords extends TestBase {
         FileUtils.copyFile(SrcFile, DestFile);
 
     }
+    
+    public static String captureScreenShot(WebDriver driver, String screenShotName){
+        
+    	   try{
+    	    //Convert web driver object to TakeScreenshot
+    	   
+    	         TakesScreenshot scrShot = ((TakesScreenshot) driver);
+    	         //Call getScreenshotAs method to create image file
+    	         File SrcFile = scrShot.getScreenshotAs(OutputType.FILE);
+    	         String dest = System.getProperty("user.dir")+"\\"+screenShotName+".png";
+    	         //Move image file to new destination 
+    	         File DestFile = new File(dest);
+    	         //Copy file at destination
+    	         FileUtils.copyFile(SrcFile, DestFile);
+    	         return dest;
+    	   }catch(Exception e){
+    	    System.out.println("Exception while taking screenshots" + e.getMessage());
+    	    return e.getMessage();
+    	   }
+    	     }
 
     //Navigate 
     public static void navigate(String URL) {

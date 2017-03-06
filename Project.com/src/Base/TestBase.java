@@ -10,7 +10,6 @@ import java.util.Random;
 import java.util.concurrent.TimeUnit;
 
 import org.apache.commons.io.FileUtils;
-
 import org.openqa.selenium.By;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
@@ -21,6 +20,11 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.htmlunit.HtmlUnitDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.openqa.selenium.remote.DesiredCapabilities;
+import org.openqa.selenium.support.ui.WebDriverWait;
+
+import com.relevantcodes.extentreports.ExtentReports;
+import com.relevantcodes.extentreports.ExtentTest;
+import com.thoughtworks.selenium.webdriven.commands.WaitForPageToLoad;
 
 public class TestBase {
 
@@ -32,6 +36,7 @@ public class TestBase {
     public static String file = System.getProperty("user.dir") + "\\" + "screenshot" + (new Random().nextInt()) + ".png";
     public static DecimalFormat f = new DecimalFormat("##.000");
     public static List < WebElement > elem;
+    
 
     public static String actual_EstimatedCostInUSD = "";
     public static String actual_NegotiatedCostInUSD = "";
@@ -56,6 +61,8 @@ public class TestBase {
     public static String recordURL="";
     public static double Title=0;
     public static double scoreSum =0;
+    public static ExtentReports reports;
+    public static ExtentTest logger;
 
 
     // initialize .Properties files
