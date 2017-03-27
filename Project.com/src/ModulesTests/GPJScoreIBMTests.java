@@ -24,10 +24,10 @@ public class GPJScoreIBMTests extends Keywords{
         openBrowser();
         navigate("Base_URL");
         login();
-        reports = new ExtentReports(System.getProperty("user.dir")+"//demo.html");
+        reports = new ExtentReports(System.getProperty("user.dir")+"//GPJScoreIBM.html");
     }
 	
-	@Test(priority = 0, description = "To verify SCORE_Non_BU_Specific_Required when we select Non BU when Client Code = 1208- IBM")
+	@Test(priority = 0, description = "To verify SCORE_Non_BU_Specific_Required when we select Client Code = 1208- IBM")
     public void ClientCodeFunctionalityTest() throws InterruptedException {
         GPJScoreIBM IBMScoreObject = PageFactory.initElements(driver, GPJScoreIBM.class);
         IBMScoreObject.ClientCodeFunctionality();
@@ -146,7 +146,7 @@ public class GPJScoreIBMTests extends Keywords{
     public void tearDown() {
         try {
             Thread.sleep(2000);
-            closeBrowser();
+            //closeBrowser();
         } catch (InterruptedException e) {
             // TODO Auto-generated catch block
             e.printStackTrace();

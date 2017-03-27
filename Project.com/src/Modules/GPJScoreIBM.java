@@ -21,12 +21,6 @@ import com.relevantcodes.extentreports.LogStatus;
 import com.thoughtworks.selenium.webdriven.commands.DoubleClick;
 public class GPJScoreIBM extends Keywords {
 	
-
-    public GPJScoreIBM() {
-        // TODO Auto-generated constructor stub
-        navigate(CONFIG.getProperty("Base_URL"));
-    }
-
     //User's Login Button
     @FindBy(name = "login")
     public static WebElement User_Login_btn;
@@ -325,6 +319,13 @@ public class GPJScoreIBM extends Keywords {
     }
 
     //***************************** Mandatory Fields Filling in Cost Saving Object *********************************//
+	public static void enterDate(){
+		entryDate_tf.clear();
+        write(entryDate_tf, "3/23/2017");
+		logger.log(LogStatus.INFO, "Entered Entry Date ");
+        write(SCOREDate_tf, "1/1/2017");
+		logger.log(LogStatus.INFO, "Entered Score Date ");
+	}
     public static void CostSavingMandatoryFields() throws InterruptedException {
     	logger.log(LogStatus.INFO, "Creating Score Saving Record !!!");
         click(GPJ_SCORE_CostSavingTab);
@@ -360,28 +361,20 @@ public class GPJScoreIBM extends Keywords {
     	logger = reports.startTest("TestClientCodeFunctionalityVerification");
         CostSavingMandatoryFields();
 		logger.log(LogStatus.INFO, "GPJ Score Record is created");
-        entryDate_tf.clear();
-        write(entryDate_tf, "1/5/2017");
-		logger.log(LogStatus.INFO, "Entered Entry Date ");
-        write(SCOREDate_tf, "1/15/2017");
-		logger.log(LogStatus.INFO, "Entered Score Date ");
+        enterDate();
         selectByVisibleText(ClientCode_picklist, "1208 - IBM");
 		logger.log(LogStatus.INFO, "Selected Client Code i.e. 1208 - IBM");
         click(SaveBtn);
 		logger.log(LogStatus.INFO, "Clicked Save button");
-        Assert.assertEquals(clientCodeAlertMsg.getText(), "Error: Please select a value. Required when Client Code = 1208 - IBM", "Alert message is not displayed");
-        logger.log(LogStatus.PASS, "Displayd Alert message ");
+        Assert.assertEquals(clientCodeAlertMsg.getText(), "Error: Please select a value. Required when Client Code = 1208 - IBM", "Error message is not displayed");
+        logger.log(LogStatus.PASS, "Displayd error message ");
     }
 
     public void GPJSCORECostSavingRecordSubmission() throws InterruptedException {
     	logger = reports.startTest("TestGPJSCORECostSavingRecordSubmission");
         CostSavingMandatoryFields();
 		logger.log(LogStatus.INFO, "GPJ Score Record is created");
-        entryDate_tf.clear();
-        write(entryDate_tf, "1/5/2017");
-		logger.log(LogStatus.INFO, "Entered Entry Date ");
-        write(SCOREDate_tf, "1/15/2017");
-		logger.log(LogStatus.INFO, "Entered Score Date ");
+        enterDate();
         selectByVisibleText(ClientCode_picklist, "1208 - IBM");
 		logger.log(LogStatus.INFO, "Selected Client Code i.e. 1208 - IBM");
         selectByVisibleText(NonBUSpecificSubProgramFramework_picklist, "Non BU Specific - Hrs Ovr Rtr");
@@ -404,11 +397,7 @@ public class GPJScoreIBM extends Keywords {
     	logger = reports.startTest("TestEstimated_and_Negotiated_Validation");
         CostSavingMandatoryFields();
 		logger.log(LogStatus.INFO, "GPJ Score Record is created");
-        entryDate_tf.clear();
-        write(entryDate_tf, "1/5/2017");
-		logger.log(LogStatus.INFO, "Entered Entry Date ");
-        write(SCOREDate_tf, "1/15/2017");
-		logger.log(LogStatus.INFO, "Entered Score Date ");
+        enterDate();
         selectByVisibleText(ClientCode_picklist, "1208 - IBM");
 		logger.log(LogStatus.INFO, "Selected Client Code i.e. 1208 - IBM");
         selectByVisibleText(NonBUSpecificSubProgramFramework_picklist, "Non BU Specific - Hrs Ovr Rtr");
@@ -426,17 +415,15 @@ public class GPJScoreIBM extends Keywords {
     	logger = reports.startTest("TestCostCalculationInUSD");
         CostSavingMandatoryFields();
 		logger.log(LogStatus.INFO, "GPJ Score Record is created");
-        entryDate_tf.clear();
-        write(entryDate_tf, "1/27/2017");
-		logger.log(LogStatus.INFO, "Entered Entry Date ");
-        write(SCOREDate_tf, "1/15/2017");
-		logger.log(LogStatus.INFO, "Entered Score Date ");
+        enterDate();
         selectByVisibleText(ClientCode_picklist, "1208 - IBM");
 		logger.log(LogStatus.INFO, "Selected Client Code i.e. 1208 - IBM");
         selectByVisibleText(NonBUSpecificSubProgramFramework_picklist, "Non BU Specific - Hrs Ovr Rtr");
 		logger.log(LogStatus.INFO, "Selected Client Code i.e. Non BU Specific - Hrs Ovr Rtr");
         click(SaveBtn);
 		logger.log(LogStatus.INFO, "Clicked Save button");
+		scrollDown();
+		logger.log(LogStatus.INFO, "Scroll down");
         //Get values Of  Local Currency for calculations
         EstimatedCostInLocal = EstimatedCostInLocalCurrency_tf.getText().replaceAll(",", "");
         NegotiatedCostInLocal = NegotiatedCostInLocalCurrency_tf.getText().replaceAll(",", "");
@@ -469,9 +456,9 @@ public class GPJScoreIBM extends Keywords {
         CostSavingMandatoryFields();
 		logger.log(LogStatus.INFO, "GPJ Score Record is created");
         entryDate_tf.clear();
-        write(entryDate_tf, "5/5/2017");
+        write(entryDate_tf, "12/1/2015");
 		logger.log(LogStatus.INFO, "Entered Entry Date ");
-        write(SCOREDate_tf, "1/15/2017");
+        write(SCOREDate_tf, "1/3/2017");
 		logger.log(LogStatus.INFO, "Entered Score Date ");
         selectByVisibleText(ClientCode_picklist, "1208 - IBM");
 		logger.log(LogStatus.INFO, "Selected Client Code i.e. 1208 - IBM");
@@ -490,9 +477,9 @@ public class GPJScoreIBM extends Keywords {
         CostSavingMandatoryFields();
 		logger.log(LogStatus.INFO, "GPJ Score Record is created");
         entryDate_tf.clear();
-        write(entryDate_tf, "1/5/2017");
+        write(entryDate_tf, "3/22/2017");
 		logger.log(LogStatus.INFO, "Entered Entry Date ");
-        write(SCOREDate_tf, "7/15/2017");
+        write(SCOREDate_tf, "7/12/2017");
 		logger.log(LogStatus.INFO, "Entered Score Date ");
         selectByVisibleText(ClientCode_picklist, "1208 - IBM");
 		logger.log(LogStatus.INFO, "Selected Client Code i.e. 1208 - IBM");
@@ -510,11 +497,7 @@ public class GPJScoreIBM extends Keywords {
     	logger = reports.startTest("TestJDE_Project_Functionality");
         CostSavingMandatoryFields();
 		logger.log(LogStatus.INFO, "GPJ Score Record is created");
-        entryDate_tf.clear();
-        write(entryDate_tf, "1/5/2017");
-		logger.log(LogStatus.INFO, "Entered Entry Date ");
-        write(SCOREDate_tf, "1/15/2017");
-		logger.log(LogStatus.INFO, "Entered Score Date ");
+        enterDate();
         selectByVisibleText(ClientCode_picklist, "1208 - IBM");
 		logger.log(LogStatus.INFO, "Selected Client Code i.e. 1208 - IBM");
         selectByVisibleText(NonBUSpecificSubProgramFramework_picklist, "Non BU Specific - Hrs Ovr Rtr");
@@ -553,11 +536,7 @@ public class GPJScoreIBM extends Keywords {
     	logger = reports.startTest("TestOtherClientCodeFunctionality");
         CostSavingMandatoryFields();
 		logger.log(LogStatus.INFO, "GPJ Score Record is created");
-        entryDate_tf.clear();
-        write(entryDate_tf, "1/5/2017");
-		logger.log(LogStatus.INFO, "Entered Entry Date ");
-        write(SCOREDate_tf, "1/15/2017");
-		logger.log(LogStatus.INFO, "Entered Score Date ");
+        enterDate();
         selectByVisibleText(ClientCode_picklist, "224895 - IBM Non Marketing");
 		logger.log(LogStatus.INFO, "Selected Client Code i.e. 224895 - IBM Non Marketing");
         click(SaveBtn);
@@ -1132,11 +1111,7 @@ public class GPJScoreIBM extends Keywords {
 
         // Create Score Record
         CostSavingMandatoryFields();
-        entryDate_tf.clear();
-        write(entryDate_tf, "1/5/2017");
-		logger.log(LogStatus.INFO, "Enter Entry Date" );
-        write(SCOREDate_tf, "1/15/2017");
-		logger.log(LogStatus.INFO, "Enter Score Date" );
+        enterDate();
         selectByVisibleText(ClientCode_picklist, "1208 - IBM");
 		logger.log(LogStatus.INFO, "Selected Client Code i.e. 1208 - IBM" );
         selectByVisibleText(NonBUSpecificSubProgramFramework_picklist, "Non BU Specific - Hrs Ovr Rtr");
@@ -1146,7 +1121,6 @@ public class GPJScoreIBM extends Keywords {
         recordURL = driver.getCurrentUrl();
 		logger.log(LogStatus.INFO, "Copy GPJ Score current URL and stored in recordURL vareiable successfully " );
 
-        //Logout
         //Logout
         click(Header_link);
 		logger.log(LogStatus.INFO, "Clicked Header button" );
@@ -1200,11 +1174,11 @@ public class GPJScoreIBM extends Keywords {
     }
 
     public void Corporate_Approval_Not_Deleted_By_FieldandRegionalUsers() throws Throwable {
-    	logger = reports.startTest("TestCorporate_Approval_Not_Deleted_By_FieldandRegionalUsers");
+    	logger = reports.startTest("TestCorporate_Approval_Not_Deleted_By_FieldAndRegionalUsers");
         if (!isLoggedIn) {
-            //Login with Corporate Officer User i.e. Scott Hart
+            //Login with Field Level Officer User i.e. Julie Priebe
             navigate("Field_Officer");
-			logger.log(LogStatus.INFO, "Login with Field Level  Officer i.e. Julie Priebe" );
+			logger.log(LogStatus.INFO, "Navigated to Field Level User URL i.e. Login with Field Level  Officer i.e. Julie Priebe" );
         } else {
             //Logout
         click(Header_link);
@@ -1213,20 +1187,16 @@ public class GPJScoreIBM extends Keywords {
 		logger.log(LogStatus.INFO, "Clicked Logout button" );
         isLoggedIn = false;
             navigate("Field_Officer");
-			logger.log(LogStatus.INFO, "Login with Field Level Officer i.e. Julie Priebe" );
+			logger.log(LogStatus.INFO, "Login with Field Level Officer i.e. Julie Priebe Navigated to Field Level User URL i.e. Login with Field Level  Officer i.e. Julie Priebe" );
 
 
         }
-        //Login with Field Officer User i.e. Julie  APAC - 2. Pending Regional Approval
-        //navigate("Corporate_Officer");
-
+        
         //click LogIn button
         click(User_Login_btn);
-		logger.log(LogStatus.INFO, "Logged In with Corporate Officer user's  i.e. Scott hart" );
+		logger.log(LogStatus.INFO, "Logged In with Field Level Officer user's  i.e. Julie Priebe " );
         isLoggedIn = true;
-
-
-
+        
         //click on Tab
         click(GPJ_SCORE_CostSavingTab);
 		logger.log(LogStatus.INFO, "Clicked GPJ Score Tab" );
@@ -1234,32 +1204,38 @@ public class GPJScoreIBM extends Keywords {
         selectByTextUsingJavaScript(selectListView_picklist, "APAC - 5. Corporate Approved");
 		logger.log(LogStatus.INFO, "Selected 'APAC - 5. Corporate Approved' ..." );
 
-
-        // click go
+		// click go
         click(go_btn);
 		logger.log(LogStatus.INFO, "Clicked Go button" );
         Assert.assertNotEquals(driver.findElement(By.id("ext-gen11")).getText(), "No records to display.", "No Data for display || Hence Test Cases Skipped.");
 		logger.log(LogStatus.PASS, "Verified Data is available for selection" );
+		
+		closeAlert();
+		logger.log(LogStatus.INFO, "Pop-up Alert is closed" );
+				
         // click top record and open in tab
         List < WebElement > elemCCheckbox = driver.findElements(By.cssSelector("[class='x-grid3-cell-inner x-grid3-col-NAME']"));
         for (int j = 0; j < 1; j++) {
             elemCCheckbox.get(j).click();
         }
 
-		logger.log(LogStatus.INFO, "Record Selected" );
-
-        //click delete button
+		logger.log(LogStatus.INFO, "Successfully Clicked on Record Name" );
+		
+		//click delete button
         click(DeleteBtn);
+        logger.log(LogStatus.INFO, "Clicked Delete button" );
         if (isAlertPresents()) {
             driver.switchTo().alert().accept();
             driver.switchTo().defaultContent();
         }
+        
+        logger.log(LogStatus.INFO, "Closed pop up alert." );
 
-		logger.log(LogStatus.INFO, "Closed pop up alert." );
-		
         //Verify Filed Officer Privileges For regional Approval 
         Assert.assertEquals(ValidationErrorsMsg.getText().contains("Validation Errors While Saving Record(s)"), true, "Failed: It should display 'Validation Errors While Saving Record(s)' Error message As Corporate Approval Not Deleted By Field Users");
 
+        logger.log(LogStatus.PASS, "Display 'Validation Errors While Saving Record(s)' Error message As Corporate Approval Not Deleted By Field Users" );
+        
         click(here_btn);
 		logger.log(LogStatus.INFO, "Clicked here button" );
         //Logout
@@ -1272,9 +1248,9 @@ public class GPJScoreIBM extends Keywords {
 
         //now Login with Regional User
         if (!isLoggedIn) {
-            //Login with Reginoal Officer User i.e. Julie  APAC - 2. Pending Regional Approval
+            //Login with Regional Officer User i.e. Ying wen
             navigate("Regional_Officer");
-			logger.log(LogStatus.INFO, "Login with Reginoal  Officer i.e. Ying Wen" );
+			logger.log(LogStatus.INFO, "Login with Regional  Officer i.e. Ying Wen" );
         } else {
             //Logout
         click(Header_link);
@@ -1283,16 +1259,13 @@ public class GPJScoreIBM extends Keywords {
 		logger.log(LogStatus.INFO, "Clicked Logout button" );
         isLoggedIn = false;
             navigate("Regional_Officer");
-			logger.log(LogStatus.INFO, "Login with Reginoal  Officer i.e. Ying Wen" );
+			logger.log(LogStatus.INFO, "Navigated to Regional Officer's URl i.e. Login with Reginoal  Officer i.e. Ying Wen" );
 
         }
         //click LogIn button
         click(User_Login_btn);
 		logger.log(LogStatus.INFO, "Clicked Login button" );
         isLoggedIn = true;
-
-
-
         //click on Tab
         click(GPJ_SCORE_CostSavingTab);
 		logger.log(LogStatus.INFO, "Clicked GPJ Score Tab" );
@@ -1311,16 +1284,21 @@ public class GPJScoreIBM extends Keywords {
 
         Assert.assertNotEquals(driver.findElement(By.id("ext-gen11")).getText(), "No records to display.", "No Data for display || Hence Test Cases Skipped.");
 		logger.log(LogStatus.PASS, "Verified Data is available for selection" );
+		
+		closeAlert();
+		logger.log(LogStatus.INFO, "Pop-up Alert is closed" );
+		
         // click top record and open in tab
         List < WebElement > elemCCheckbox1 = driver.findElements(By.cssSelector("[class='x-grid3-cell-inner x-grid3-col-NAME']"));
         for (int k = 0; k < 1; k++) {
             elemCCheckbox1.get(k).click();
         }
-		logger.log(LogStatus.INFO, "Record Selected" );
+        logger.log(LogStatus.INFO, "Successfully Clicked on Record Name" );
 
 
         //click delete button
         click(DeleteBtn);
+        logger.log(LogStatus.INFO, "Clicked delete button" );
         if (isAlertPresents()) {
             driver.switchTo().alert().accept();
             driver.switchTo().defaultContent();
@@ -1341,9 +1319,16 @@ public class GPJScoreIBM extends Keywords {
     }
 
     public void Summition_Of_SavingsInUSD_OnApprovalPage() throws InterruptedException {
-
-    	logger = reports.startTest("TestSummition_Of_SavingsInUSD_OnApprovalPage");
-    	
+		logger = reports.startTest("TestSummition_Of_SavingsInUSD_OnApprovalPage");
+		
+		if(isLoggedIn){
+		//Logout
+        click(Header_link);
+		logger.log(LogStatus.INFO, "Clicked Header button" );
+        Logout(logout_btn);
+		logger.log(LogStatus.INFO, "Clicked Logout button" );
+        isLoggedIn = false;
+		}else {
         //click on Tab
         click(GPJ_SCORE_CostSavingTab);
 		logger.log(LogStatus.INFO, "Clicked GPJ Score Tab" );
@@ -1379,16 +1364,17 @@ public class GPJScoreIBM extends Keywords {
             scoreTotalList.add(Double.parseDouble(match.getText().substring(match.getText().indexOf("$") + 1, match.getText().indexOf("(") - 1)));
 
         }
-
+        logger.log(LogStatus.INFO, "Expanded Score lists and get score total value" );
         for (Double sum: scoreTotalList) {
             scoreSum += sum;
 
         }
-
+        logger.log(LogStatus.INFO, "Summition of Total Score value and stored in Scoresum variable." );
         Assert.assertEquals(Title, scoreSum, scoreSum + " is not equall to Header's value i.e. " + Title);
 		logger.log(LogStatus.PASS, "Verified Score Title's value is matched with Summition of Score Savings in USD" );
 
 
-
+		}
+	
     }
 }

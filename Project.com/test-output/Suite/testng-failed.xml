@@ -1,16 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite guice-stage="DEVELOPMENT" name="Failed suite [Suite]">
-  <test name="Test(failed)">
+<suite name="Failed suite [Suite]">
+  <test name="Test(failed)" preserve-order="false">
     <classes>
-      <class name="ModulesTests.IBMScoreTests">
+      <class name="ModulesTests.GPJScoreIBMTests">
         <methods>
+          <include name="Verify_Draft_SCORE_All_Aprroval_For_RegionalUserTest"/>
           <include name="init"/>
-          <include name="CostCalculationInUSDTest"/>
-          <include name="tearDown"/>
           <include name="Summition_Of_SavingsInUSD_OnApprovalPageTest"/>
+          <include name="Corporate_Officer_FunctionalityTest"/>
+          <include name="Regional_Officer_FunctionalityTest"/>
+          <include name="Only_RecordOwner_Allowed_To_Submit_ScoreTest"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="Corporate_Approval_Not_Deleted_By_FieldandRegionalUsersTest"/>
+          <include name="CostCalculationInUSDTest"/>
         </methods>
-      </class> <!-- ModulesTests.IBMScoreTests -->
+      </class>
     </classes>
-  </test> <!-- Test(failed) -->
-</suite> <!-- Failed suite [Suite] -->
+  </test>
+</suite>

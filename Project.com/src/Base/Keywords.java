@@ -447,5 +447,11 @@ public class Keywords extends TestBase {
     	return false;
     	}// catch
     	}
+    
+    public void scrollDown(){
+    	JavascriptExecutor jse = (JavascriptExecutor)driver;
+    	jse.executeScript("scroll(0, 750);");
+    	//jse.executeScript("window.scrollBy(0,250)", "");
+    }
 
 }

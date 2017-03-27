@@ -3,21 +3,12 @@
 <suite name="Failed suite [Default suite]">
   <test name="Default test(failed)" preserve-order="false">
     <classes>
-      <class name="ModulesTests.IBMScoreTests">
+      <class name="ModulesTests.GPJScoreIBMTests">
         <methods>
-          <include name="Corporate_Approval_Not_Deleted_By_FieldandRegionalUsersTest"/>
-          <include name="JDE_Project_FunctionalityTest"/>
-          <include name="tearDown"/>
           <include name="init"/>
-          <include name="CostCalculationInUSDTest"/>
-          <include name="Regional_Officer_FunctionalityTest"/>
-          <include name="Only_RecordOwner_Allowed_To_Submit_ScoreTest"/>
-          <include name="otherClientCodeFunctionalityTest"/>
-          <include name="Corporate_Officer_FunctionalityTest"/>
-          <include name="GPJSCORECostSavingRecordSubmissionTest"/>
-          <include name="Summition_Of_SavingsInUSD_OnApprovalPageTest"/>
-          <include name="Verify_Draft_SCORE_All_Aprroval_For_RegionalUserTest"/>
-          <include name="Field_Officer_FunctionalityTest"/>
+          <include name="SCORE_Date_Validation_QuarterTest"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
         </methods>
       </class>
     </classes>
